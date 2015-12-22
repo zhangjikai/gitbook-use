@@ -15,8 +15,8 @@
         "search-pro",
         "advanced-emoji",
         "github",
-        "anchors",
         "ace",
+        "anchors",
         "emphasize",
         "katex",
         "include-codeblock",
@@ -27,8 +27,7 @@
         "expandable-chapters",
         "codeblock-filename",
         "baidu",
-        "ga",
-        "ungrey"
+        "ga"
     ],
     "pluginsConfig": {
         "disqus": {
