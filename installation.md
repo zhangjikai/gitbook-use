@@ -1,4 +1,4 @@
-## Gitbook安装
+## GitBook安装
 
 ### 环境要求
 
