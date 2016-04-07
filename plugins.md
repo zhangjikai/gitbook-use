@@ -15,6 +15,25 @@
 }
 ```
 
+### 多说
+添加多说
+
+[插件地址](https://plugins.gitbook.com/plugin/duoshuo)
+
+```json
+{
+    "plugins": [
+        "duoshuo"
+    ],
+    "pluginsConfig": {
+        "duoshuo": {
+            "short_name": "your duoshuo's shortname",
+            "theme": "default"
+        }
+    }
+}
+```
+
 ### Search Pro
 支持中文搜索, 需要将默认的search插件去掉, :worried: 在window下安装该插件时总是出错, 同时如果标题中有包含的关键字, 标题的样式会有所变化 :worried:    
 [插件地址](https://plugins.gitbook.com/plugin/search-pro)

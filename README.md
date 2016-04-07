@@ -13,6 +13,7 @@
 
 [插件](plugins.md)  
 * Disqus - Disqus评论
+* duoshuo - 多说
 * Search Pro - 支持中文搜索
 * Advanced Emoji - 支持emoji表情
 * Github - 添加github图标
