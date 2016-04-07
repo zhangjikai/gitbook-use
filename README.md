@@ -7,6 +7,13 @@
 * [GitBook Toolchain Documentation](http://toolchain.gitbook.com/)
 * [GitBook Documentation](http://help.gitbook.com/)
 
+---
+
+1. [安装](installation.md)
+2. [命令](commands.md)
+3. [配置]()
+4. [插件]()
+
 ### [配置](settings.md)
 * [title - 标题](settings.md#title)
 * [author - 作者信息](settings.md#author)
