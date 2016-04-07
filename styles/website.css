@@ -1,9 +1,20 @@
 /* CSS for website */
 h1 , h2{
     border-bottom: 1px solid #EFEAEA;
+    padding-bottom: 3px;
 }
+
 
 .book .book-body .page-wrapper .page-inner section.normal {
     min-height:350px;
     margin-bottom: 30px;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal hr {
+    height: 0px;
+    padding: 0;
+    margin: 1.7em 0;
+    overflow: hidden; 
+    background-color: #e7e7e7;
+    border-bottom: 1px dotted #e7e7e7;
 }
