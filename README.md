@@ -11,8 +11,8 @@
 
 1. [安装](installation.md)
 2. [命令](commands.md)
-3. [配置]()
-4. [插件]()
+3. [配置](#配置)
+4. [插件](#插件)
 
 ### [配置](settings.md)
 * [title - 标题](settings.md#title)
