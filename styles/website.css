@@ -2,3 +2,8 @@
 h1 , h2{
     border-bottom: 1px solid #EFEAEA;
 }
+
+.book .book-body .page-wrapper .page-inner section.normal {
+    min-height:350px;
+    margin-bottom: 30px;
+}
