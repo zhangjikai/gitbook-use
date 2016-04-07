@@ -1,5 +1,5 @@
-## Gitbook配置
-记录Gitbook的一些配置信息
+## GitBook配置
+记录GitBook的一些配置信息
 
 * [title - 标题](#title)
 * [author - 作者信息](#author)
