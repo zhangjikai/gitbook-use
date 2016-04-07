@@ -4,6 +4,7 @@
     "author" : "zhangjikai",
     "generator": "site",
     "language" : "zh-hans",
+    "gitbook" : "2.6.4",
     "links" : {
         "sidebar" : {
             "Home" : "http://zhangjikai.com"
@@ -16,29 +17,25 @@
         "advanced-emoji",
         "github",
         "ace",
-        "anchors",
         "emphasize",
         "katex",
+        "anchors",
         "include-codeblock",
-        "splitter",
         "mermaid",
         "tbfed-pagefooter",
         "sectionx",
         "expandable-chapters",
         "codeblock-filename",
         "baidu",
-        "ga"
+        "sitemap@1.0.2"
+       
     ],
     "pluginsConfig": {
         "disqus": {
             "shortName": "gitbookuse"
         },
-        "search-pro": {
-            "cutWordLib": "nodejieba",
-            "defineWord" : ["Gitbook Use"]
-        },
         "github": {
-            "url": "https://github.com/zhangjikai/"
+            "url": "https://github.com/zhangjikai/gitbook-use"
         },
         
         "sharing": {
@@ -47,7 +44,7 @@
             "twitter": true,
             "google": false,
             "instapaper": false,
-            "vk": false,
+             "vk": false,
             "all": [
                 "facebook", "google", "twitter",
                 "weibo", "instapaper"
@@ -63,9 +60,9 @@
         "baidu": {
             "token" : "ff100361cdce95dd4c8fb96b4009f7bc"
         },
-        
-        "ga": {
-            "token": "UA-71675100-1"
+        "sitemap": {
+            "hostname": "http://gitbook.zhangjikai.com"
         }
+        
     }
 }

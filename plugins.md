@@ -1,5 +1,26 @@
-## 插件
-记录一些实用的插件
+## Gitbook插件
+记录一些实用的插件, 如果要指定插件的版本可以使用 `plugin@0.3.1`
+
+* [Disqus - Disqus评论](#disqus)
+* [duoshuo - 多说](#duoshuo)
+* [Search Pro - 支持中文搜索](#search-pro)
+* [Advanced Emoji - 支持emoji表情](#advanced-emoji)
+* [Github - 添加github图标](#github)
+* [Ace Plugin - 支持ace](#ace-plugin)
+* [Emphasize - 强调文字(为文字加上底色)](#ace-plugin)
+* [KaTex - 支持数学公式](#katex)
+* [Include Codeblock - 使用代码块显示指定文件的内容](#include-codeblock)
+* [Splitter - 自由调节侧边栏宽度](#splitter)
+* [Mermaid -支持渲染Mermaid图表](#mermaid)
+* [sharing - 分享](#sharing)
+* [Tbfed-pagefooter - 为页面添加页脚](#tbfedpagefooter)
+* [Toggle Chapters - 折叠章节](#toggle-chapters)
+* [Sectionx - 将页面分块显示](#sectionx)
+* [Codeblock-filename - 为代码块添加文件名称](#codeblockfilename)
+* [ga - google 统计](#ga)
+* [baidu - 百度统计](#baidu)
+* [sitemap - 生成sitemap](#sitemap)
+
 ### Disqus
 添加disqus评论
 
@@ -15,7 +36,7 @@
 }
 ```
 
-### 多说
+### Duoshuo
 添加多说
 
 [插件地址](https://plugins.gitbook.com/plugin/duoshuo)
@@ -34,8 +55,9 @@
 }
 ```
 
+
 ### Search Pro
-支持中文搜索, 需要将默认的search插件去掉, :worried: 在window下安装该插件时总是出错, 同时如果标题中有包含的关键字, 标题的样式会有所变化 :worried:    
+支持中文搜索, 需要将默认的search插件去掉, :worried: 在window下安装该插件时总是出错 :worried:    
 [插件地址](https://plugins.gitbook.com/plugin/search-pro)
 ```json
 "plugins": [
@@ -262,7 +284,7 @@ helloworld
 ```js:test.js
 console.log("test");
 ```
-### ga
+### GA
 google 统计  
 [插件地址](https://plugins.gitbook.com/plugin/ga)
 ```json
@@ -276,7 +298,7 @@ google 统计
 }
 ```
 
-### baidu
+### Baidu
 百度统计  
 [插件地址](https://plugins.gitbook.com/plugin/baidu)
 ```json
@@ -289,6 +311,21 @@ google 统计
     }
 }
 ```
+
+### Sitemap
+生成sitemap  
+[插件地址](https://plugins.gitbook.com/plugin/sitemap)  
+```json
+{
+    "plugins": ["sitemap@1.0.2"],
+    "pluginsConfig": {
+        "sitemap": {
+            "hostname": "http://mybook.com/"
+        }
+    }
+}
+```
+使用1.1.0生成的xml文件有些问题, 所以这里使用1.0.2版本
 
 
 

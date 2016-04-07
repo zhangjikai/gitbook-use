@@ -1,4 +1,16 @@
-# 配置
+## Gitbook配置
+记录Gitbook的一些配置信息
+
+* [title - 标题](#title)
+* [author - 作者信息](#author)
+* [description - 书本描述](#description)
+* [language - 使用的语言](#language)
+* [links - 在侧边栏添加链接](#links)
+* [styles - 自定义样式](#styles)
+* [plugins - 插件](#plugins)
+* [pluginsConfig - 插件配置](#pluginsconfig)
+* [gitbook - 指定gitbook版本](#gitbook)
+
 
 ### title
 设置书本的标题
@@ -63,7 +75,7 @@ h1 , h2{
     "disqus"
 ]
 ```
-添加新插件之间需要运行`gitbook install`来安装新的插件  
+添加新插件之后需要运行`gitbook install`来安装新的插件  
 
 Gitbook默认带有5个插件：
 * highlight
@@ -88,5 +100,11 @@ Gitbook默认带有5个插件：
         "size":  1
     }
 }
+```
+
+### gitbook
+指定使用的gitbook版本
+```json
+"gitbook" : "2.6.4",
 ```
 
