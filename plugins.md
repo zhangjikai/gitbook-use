@@ -1,4 +1,4 @@
-## Gitbook插件
+## GitBook插件
 记录一些实用的插件, 如果要指定插件的版本可以使用 `plugin@0.3.1`
 
 * [Disqus - Disqus评论](#disqus)
