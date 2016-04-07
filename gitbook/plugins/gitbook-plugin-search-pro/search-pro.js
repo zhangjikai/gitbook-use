@@ -31,8 +31,8 @@ require(['gitbook', 'lodash'], function(gitbook, _) {
 
     // 高亮文本
     var highLightPageInner = function(keyword) { 
-        var reg = new RegExp('(' + keyword.replace(/,/,'|') + ')','ig');
-        $('.page-inner').html($('.page-inner').html().replace(reg,'<span class="search-highlight">$1</span>'));
+        var reg = new RegExp('(>[^<]*)(' + keyword.replace(/,/,'|') + ')','igm');
+        $('.page-inner').html($('.page-inner').html().replace(reg,'$1<span class="search-highlight">$2</span>'));
         
         // 定位到第一个高亮词
         var firstWordTop = $('.search-highlight')[0].offsetTop;

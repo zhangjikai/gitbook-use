@@ -3,4 +3,3 @@ require(["gitbook"], function(gitbook) {
         config.baidu = config.baidu || {};
     });
 });
-
