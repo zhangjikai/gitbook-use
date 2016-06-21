@@ -8,7 +8,7 @@ require(['gitbook', 'jQuery'], function(gitbook, $) {
     // adding the trigger element to each ARTICLES parent and binding the event
     $(ARTICLES)
       .parent(CHAPTER)
-      .children('a')
+      .children('a,span')
       .append(
         $(TRIGGER_TEMPLATE)
           .on('click', function(e) {

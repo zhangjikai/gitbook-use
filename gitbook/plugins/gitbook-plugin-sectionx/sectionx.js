@@ -30,6 +30,10 @@ require(["gitbook", "jquery"], function(gitbook, $) {
         $('sec').each(function() {
             if ($(this).find('.panel').hasClass('hidden'))
                 $(this).find('.panel').removeClass('hidden').hide();
+            if($(this).data('collapse') === true) {
+              $('#' + $(this).data('id')).collapse('hide');
+            }
+              //.collapse('toggle');
         });
 
         $('.section').each(function() {

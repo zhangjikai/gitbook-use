@@ -28,10 +28,7 @@ require(["gitbook", "jquery"], function(gitbook, $) {
             if (config.check === false)
                 editor.session.setOption("useWorker", false);
 
-            if (config.lang)
-                editor.getSession().setMode('ace/mode/' + config.lang);
-            else
-                editor.getSession().setMode('ace/mode/c_cpp'); //default to c language
+            editor.getSession().setMode('ace/mode/' + config.lang);
         });
     };
 
