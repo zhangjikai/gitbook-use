@@ -13,8 +13,8 @@
    "plugins": [
         "disqus",
         "-search",
-        "search-pro",
-        "advanced-emoji",
+        "search-pro@1.0.7",
+        "advanced-emoji@0.1.5",
         "github",
         "ace",
         "emphasize",
@@ -27,7 +27,11 @@
         "expandable-chapters",
         "codeblock-filename",
         "baidu",
-        "sitemap@1.0.2"
+        "sitemap@1.0.2",
+        "donate",
+        "local-video",
+        "toc",
+        "edit-link"
        
     ],
     "pluginsConfig": {
@@ -37,6 +41,10 @@
         "github": {
             "url": "https://github.com/zhangjikai/gitbook-use"
         },
+        "search-pro": {
+            "cutWordLib": "nodejieba",
+            "defineWord": ["gitbook-use"]
+         },
         
         "sharing": {
             "weibo": true,
@@ -62,7 +70,21 @@
         },
         "sitemap": {
             "hostname": "http://gitbook.zhangjikai.com"
-        }
+        },
+         
+        "donate": {
+          "wechat": "http://zhangjikai.com/resource/weixin.png",
+          "alipay": "http://zhangjikai.com/resource/alipay.png",
+          "title": "",
+          "button": "赏",
+          "alipayText": "支付宝打赏",
+          "wechatText": "微信打赏"
+        },
+        
+         "edit-link": {
+                "base": "https://github.com/zhangjikai/gitbook-use/edit/master",
+                "label": "Edit This Page"
+         }
         
     }
 }

@@ -1,5 +1,5 @@
 ## GitBook配置
-记录GitBook的一些配置信息
+记录Gitbook的一些配置信息
 
 * [title - 标题](#title)
 * [author - 作者信息](#author)
@@ -10,7 +10,6 @@
 * [plugins - 插件](#plugins)
 * [pluginsConfig - 插件配置](#pluginsconfig)
 * [gitbook - 指定gitbook版本](#gitbook)
-
 
 ### title
 设置书本的标题

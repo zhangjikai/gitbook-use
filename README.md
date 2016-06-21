@@ -44,5 +44,9 @@
 * [Codeblock-filename - 为代码块添加文件名称](plugins.md#codeblockfilename)
 * [ga - google 统计](plugins.md#ga)
 * [baidu - 百度统计](plugins.md#baidu)
+* [donate - 打赏](plugins.md#donate)
+* [Local Video - 使用Video.js播放视频](plugins.md#local-video)
+* [toc - 自动生成目录](plugins.md#toc)
+* [Edit Link - 链接到当前页源文件上](plugins.md#edit-link)
 * [sitemap - 生成sitemap](plugins.md#sitemap)
 

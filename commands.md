@@ -1,5 +1,5 @@
 ## 命令
-这里主要介绍一下 Gitbook 的命令行工具 `gitbook-cli` 的一些命令, 首先说明两点:
+这里主要介绍一下 GitBook 的命令行工具 `gitbook-cli` 的一些命令, 首先说明两点:
 * `gitbook-cli` 和 `gitbook` 是两个软件
 * `gitbook-cli` 会将下载的 gitbook 的不同版本放到 `~/.gitbook`中, 可以通过设置`GITBOOK_DIR`环境变量来指定另外的文件夹
 

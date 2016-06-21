@@ -1,5 +1,6 @@
 ## GitBook插件
-记录一些实用的插件, 如果要指定插件的版本可以使用 `plugin@0.3.1`
+
+记录一些实用的插件, 如果要指定插件的版本可以使用 `plugin@0.3.1`。下面的插件在 GitBook 的 `2.6.4`版本中可以正常工作，因为一些插件可能不会随着 GitBook 版本的升级而升级，即下面的插件可能不适用高版本的 GitBook，所以这里指定了GitBook的版本。另外一些插件在windows上的安装会有问题，比如 `Search Pro` 和 `Mermaid`，我也没有找到特别好的解决办法，如果有知道相关解决办法的，请不吝赐教。
 
 * [Disqus - Disqus评论](#disqus)
 * [duoshuo - 多说](#duoshuo)
@@ -19,6 +20,10 @@
 * [Codeblock-filename - 为代码块添加文件名称](#codeblockfilename)
 * [ga - google 统计](#ga)
 * [baidu - 百度统计](#baidu)
+* [donate - 打赏](#donate)
+* [Local Video - 使用Video.js播放视频](#local-video)
+* [toc - 自动生成目录](#toc)
+* [Edit Link - 链接到当前页源文件上](#edit-link)
 * [sitemap - 生成sitemap](#sitemap)
 
 ### Disqus
@@ -82,7 +87,9 @@
 ]
 ```
 使用示例:   
+
 :bowtie: :smile: :laughing: :blush: :smiley: :relaxed: 
+
 
 ### Github
 添加github图标  
@@ -312,6 +319,88 @@ google 统计
 }
 ```
 
+### Donate
+打赏插件  
+[插件地址](https://plugins.gitbook.com/plugin/donate)  
+```json
+"plugins": [
+    "donate"
+],
+"pluginsConfig": {
+    "donate": {
+        "wechat": "http://zhangjikai.com/resource/weixin.png",
+        "alipay": "http://zhangjikai.com/resource/alipay.png",
+        "title": "",
+        "button": "赏",
+        "alipayText": "支付宝打赏",
+        "wechatText": "微信打赏"
+    }
+}
+```
+
+### Local Video
+使用Video.js 播放本地视频 
+
+```json
+"plugins": [ "local-video" ]
+```
+使用示例：为了使视频可以自适应，我们指定视频的`width`为100%，并设置宽高比为`16:9`
+```
+{% raw %}
+<video id="my-video" class="video-js" controls preload="auto" width="100%" 
+data-setup='{"aspectRatio":"16:9"}'>
+  <source src="http://zhangjikai.com/resource/demo.mp4" type='video/mp4' >
+  <p class="vjs-no-js">
+    To view this video please enable JavaScript, and consider upgrading to a web browser that
+    <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+  </p>
+</video>
+{% endraw %}
+```
+   
+<br />
+{% raw %}
+<video id="my-video" class="video-js" controls preload="auto" width="100%" data-setup='{"aspectRatio":"16:9"}'>
+  <source src="http://zhangjikai.com/resource/demo.mp4" type='video/mp4' >
+  <p class="vjs-no-js">
+    To view this video please enable JavaScript, and consider upgrading to a web browser that
+    <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+  </p>
+</video>
+{% endraw %}
+
+### Toc
+自动生成本页的目录结构，一般情况下生成的目录是正常的，但是可能会与其他插件冲突，造成生成的目录不正确.  
+[插件地址](https://plugins.gitbook.com/plugin/toc)  
+下面的 `pluginsConfig`用来给`ul`添加css样式
+```json
+"plugins": [
+    "toc"
+],
+"pluginsConfig": {
+    "toc": {
+        "addClass": true,
+        "className": "toc"
+    }
+}
+```
+
+使用方法: 在需要生成目录的地方加上 &lt;!-- toc --&gt;
+
+
+### Edit Link
+如果将gitbook的源文件保存到github或者其他的仓库上，使用该插件可以链接到当前页的源文件上。   
+[插件地址](https://plugins.gitbook.com/plugin/edit-link)  
+```json
+"plugins": ["edit-link"],
+"pluginsConfig": {
+    "edit-link": {
+        "base": "https://github.com/USER/REPO/edit/BRANCH",
+        "label": "Edit This Page"
+    }
+}
+```
+
 ### Sitemap
 生成sitemap  
 [插件地址](https://plugins.gitbook.com/plugin/sitemap)  
@@ -326,6 +415,10 @@ google 统计
 }
 ```
 使用1.1.0生成的xml文件有些问题, 所以这里使用1.0.2版本
+
+
+
+
 
 
 
