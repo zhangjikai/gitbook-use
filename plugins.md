@@ -339,16 +339,16 @@ google 统计
 ```
 
 ### Local Video
-使用Video.js 播放本地视频 
-
+使用Video.js 播放本地视频  
+[插件地址](https://plugins.gitbook.com/plugin/local-video)  
 ```json
 "plugins": [ "local-video" ]
 ```
-使用示例：为了使视频可以自适应，我们指定视频的`width`为100%，并设置宽高比为`16:9`
+使用示例：为了使视频可以自适应，我们指定视频的`width`为100%，并设置宽高比为`16:9`，如下面所示
 ```
 {% raw %}
 <video id="my-video" class="video-js" controls preload="auto" width="100%" 
-data-setup='{"aspectRatio":"16:9"}'>
+poster="http://zhangjikai.com/resource/poster.jpg" data-setup='{"aspectRatio":"16:9"}'>
   <source src="http://zhangjikai.com/resource/demo.mp4" type='video/mp4' >
   <p class="vjs-no-js">
     To view this video please enable JavaScript, and consider upgrading to a web browser that
@@ -357,10 +357,16 @@ data-setup='{"aspectRatio":"16:9"}'>
 </video>
 {% endraw %}
 ```
-   
+另外我们还要再配置下css，即在website.css中加入
+```css
+.video-js {
+    width:100%;
+    height: 100%;
+}
+```
 <br />
 {% raw %}
-<video id="my-video" class="video-js" controls preload="auto" width="100%" data-setup='{"aspectRatio":"16:9"}'>
+<video id="my-video" class="video-js" controls preload="auto" width="100%" poster="http://zhangjikai.com/resource/poster.jpg" data-setup='{"aspectRatio":"16:9"}'>
   <source src="http://zhangjikai.com/resource/demo.mp4" type='video/mp4' >
   <p class="vjs-no-js">
     To view this video please enable JavaScript, and consider upgrading to a web browser that
