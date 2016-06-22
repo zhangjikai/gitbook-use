@@ -107,7 +107,7 @@
         data-chapter-title="插件"
         data-filepath="plugins.md"
         data-basepath="."
-        data-revision="Tue Jun 21 2016 20:00:16 GMT+0800 (CST)"
+        data-revision="Wed Jun 22 2016 09:11:13 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -408,8 +408,9 @@ int main(){
     <span class="hljs-rule"><span class="hljs-attribute">border-bottom</span>:<span class="hljs-value"> <span class="hljs-number">1px</span> dotted <span class="hljs-hexcolor">#e7e7e7</span></span></span>;
 }</span>
 
-<span class="hljs-class">.videocontent</span><span class="hljs-rules">{
-    <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">80%</span></span></span>;
+<span class="hljs-class">.video-js</span> <span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"><span class="hljs-number">100%</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">100%</span></span></span>;
 }</span>
 </code></pre>
 <h3 id="splitter"><a name="splitter" class="plugin-anchor" href="#splitter"><span class="fa fa-link"></span></a>Splitter</h3>
@@ -538,13 +539,13 @@ Insert markdown content here (you should start with h3 if you use heading).
 }
 </code></pre>
 <h3 id="local-video"><a name="local-video" class="plugin-anchor" href="#local-video"><span class="fa fa-link"></span></a>Local Video</h3>
-<p>&#x4F7F;&#x7528;Video.js &#x64AD;&#x653E;&#x672C;&#x5730;&#x89C6;&#x9891; </p>
+<p>&#x4F7F;&#x7528;Video.js &#x64AD;&#x653E;&#x672C;&#x5730;&#x89C6;&#x9891;<br><a href="https://plugins.gitbook.com/plugin/local-video" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a>  </p>
 <pre><code class="lang-json"><span class="hljs-string">&quot;plugins&quot;</span>: [ <span class="hljs-string">&quot;local-video&quot;</span> ]
 </code></pre>
-<p>&#x4F7F;&#x7528;&#x793A;&#x4F8B;&#xFF1A;&#x4E3A;&#x4E86;&#x4F7F;&#x89C6;&#x9891;&#x53EF;&#x4EE5;&#x81EA;&#x9002;&#x5E94;&#xFF0C;&#x6211;&#x4EEC;&#x6307;&#x5B9A;&#x89C6;&#x9891;&#x7684;<code>width</code>&#x4E3A;100%&#xFF0C;&#x5E76;&#x8BBE;&#x7F6E;&#x5BBD;&#x9AD8;&#x6BD4;&#x4E3A;<code>16:9</code></p>
+<p>&#x4F7F;&#x7528;&#x793A;&#x4F8B;&#xFF1A;&#x4E3A;&#x4E86;&#x4F7F;&#x89C6;&#x9891;&#x53EF;&#x4EE5;&#x81EA;&#x9002;&#x5E94;&#xFF0C;&#x6211;&#x4EEC;&#x6307;&#x5B9A;&#x89C6;&#x9891;&#x7684;<code>width</code>&#x4E3A;100%&#xFF0C;&#x5E76;&#x8BBE;&#x7F6E;&#x5BBD;&#x9AD8;&#x6BD4;&#x4E3A;<code>16:9</code>&#xFF0C;&#x5982;&#x4E0B;&#x9762;&#x6240;&#x793A;</p>
 <pre><code>{% raw %}
 &lt;video id=&quot;my-video&quot; class=&quot;video-js&quot; controls preload=&quot;auto&quot; width=&quot;100%&quot; 
-data-setup=&apos;{&quot;aspectRatio&quot;:&quot;16:9&quot;}&apos;&gt;
+poster=&quot;http://zhangjikai.com/resource/poster.jpg&quot; data-setup=&apos;{&quot;aspectRatio&quot;:&quot;16:9&quot;}&apos;&gt;
   &lt;source src=&quot;http://zhangjikai.com/resource/demo.mp4&quot; type=&apos;video/mp4&apos; &gt;
   &lt;p class=&quot;vjs-no-js&quot;&gt;
     To view this video please enable JavaScript, and consider upgrading to a web browser that
@@ -552,8 +553,14 @@ data-setup=&apos;{&quot;aspectRatio&quot;:&quot;16:9&quot;}&apos;&gt;
   &lt;/p&gt;
 &lt;/video&gt;
 {% endraw %}
-</code></pre><p><br></p>
-<video id="my-video" class="video-js" controls preload="auto" width="100%" data-setup="{&quot;aspectRatio&quot;:&quot;16:9&quot;}">
+</code></pre><p>&#x53E6;&#x5916;&#x6211;&#x4EEC;&#x8FD8;&#x8981;&#x518D;&#x914D;&#x7F6E;&#x4E0B;css&#xFF0C;&#x5373;&#x5728;website.css&#x4E2D;&#x52A0;&#x5165;</p>
+<pre><code class="lang-css"><span class="hljs-class">.video-js</span> <span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"><span class="hljs-number">100%</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">100%</span></span></span>;
+}</span>
+</code></pre>
+<p><br></p>
+<video id="my-video" class="video-js" controls preload="auto" width="100%" poster="http://zhangjikai.com/resource/poster.jpg" data-setup="{&quot;aspectRatio&quot;:&quot;16:9&quot;}">
   <source src="http://zhangjikai.com/resource/demo.mp4" type="video/mp4">
   <p class="vjs-no-js">
     To view this video please enable JavaScript, and consider upgrading to a web browser that
@@ -598,7 +605,7 @@ data-setup=&apos;{&quot;aspectRatio&quot;:&quot;16:9&quot;}&apos;&gt;
 </code></pre>
 <p>&#x4F7F;&#x7528;1.1.0&#x751F;&#x6210;&#x7684;xml&#x6587;&#x4EF6;&#x6709;&#x4E9B;&#x95EE;&#x9898;, &#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x4F7F;&#x7528;1.0.2&#x7248;&#x672C;</p>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; zhangjikai.com 2015 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2016-06-21 19:53:25
+2016-06-22 09:11:12
 </span></footer>
                     
                     </section>
