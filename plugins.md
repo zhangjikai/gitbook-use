@@ -1,5 +1,5 @@
 ## GitBook插件
-
+<!--email_off-->  
 记录一些实用的插件, 如果要指定插件的版本可以使用 `plugin@0.3.1`。下面的插件在 GitBook 的 `2.6.4`版本中可以正常工作，因为一些插件可能不会随着 GitBook 版本的升级而升级，即下面的插件可能不适用高版本的 GitBook，所以这里指定了GitBook的版本。另外一些插件在windows上的安装会有问题，比如 `Search Pro` 和 `Mermaid`，我也没有找到特别好的解决办法，如果有知道相关解决办法的，请不吝赐教。
 
 * [Disqus - Disqus评论](#disqus)
@@ -344,8 +344,8 @@ google 统计
 ],
 "pluginsConfig": {
     "donate": {
-        "wechat": "http://zhangjikai.com/resource/weixin.png",
-        "alipay": "http://zhangjikai.com/resource/alipay.png",
+        "wechat": "https://zhangjikai.com/resource/weixin.png",
+        "alipay": "https://zhangjikai.com/resource/alipay.png",
         "title": "",
         "button": "赏",
         "alipayText": "支付宝打赏",
@@ -364,8 +364,8 @@ google 统计
 ```
 {% raw %}
 <video id="my-video" class="video-js" controls preload="auto" width="100%" 
-poster="http://zhangjikai.com/resource/poster.jpg" data-setup='{"aspectRatio":"16:9"}'>
-  <source src="http://zhangjikai.com/resource/demo.mp4" type='video/mp4' >
+poster="https://zhangjikai.com/resource/poster.jpg" data-setup='{"aspectRatio":"16:9"}'>
+  <source src="https://zhangjikai.com/resource/demo.mp4" type='video/mp4' >
   <p class="vjs-no-js">
     To view this video please enable JavaScript, and consider upgrading to a web browser that
     <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
@@ -382,11 +382,11 @@ poster="http://zhangjikai.com/resource/poster.jpg" data-setup='{"aspectRatio":"1
 ```
 <br />
 {% raw %}
-<video id="my-video" class="video-js" controls preload="auto" width="100%" poster="http://zhangjikai.com/resource/poster.jpg" data-setup='{"aspectRatio":"16:9"}'>
+<video id="my-video" class="video-js" controls preload="auto" width="100%" poster="https://zhangjikai.com/resource/poster.jpg" data-setup='{"aspectRatio":"16:9"}'>
   <source src="http://zhangjikai.com/resource/demo.mp4" type='video/mp4' >
   <p class="vjs-no-js">
     To view this video please enable JavaScript, and consider upgrading to a web browser that
-    <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
   </p>
 </video>
 {% endraw %}
@@ -437,10 +437,7 @@ poster="http://zhangjikai.com/resource/poster.jpg" data-setup='{"aspectRatio":"1
 }
 ```
 使用1.1.0生成的xml文件有些问题, 所以这里使用1.0.2版本
-
-
-
-
+<!--/email_off--> 
 
 
 
