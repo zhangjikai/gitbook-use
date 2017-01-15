@@ -77,6 +77,22 @@
 }
 ```
 
+如果安装时提示
+```
+error: nodejieba@1.4.11 install: `node-gyp rebuild`
+Exit status 1
+```
+在 Ubuntu 下的解决方案为:
+* 删除 `nodejieba` 库
+```
+sudo npm uninstall -g nodejieba
+```
+* 删除主目录下的 `.node-gyp` 文件夹
+* 重新安装 `nodejieba` 库
+```
+sudo npm install -g nodejieba@1.4.11
+```
+
 ### Advanced Emoji
 支持emoji表情  
 [emoij表情列表](http://www.emoji-cheat-sheet.com/)  

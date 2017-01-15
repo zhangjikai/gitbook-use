@@ -7,7 +7,7 @@
     "gitbook" : "2.6.4",
     "links" : {
         "sidebar" : {
-            "Home" : "http://zhangjikai.com"
+            "Home" : "https://zhangjikai.com"
         }
     },
    "plugins": [
@@ -31,7 +31,8 @@
         "donate",
         "local-video",
         "toc",
-        "edit-link"
+        "edit-link",
+        "back-to-top-button@0.1.0"
        
     ],
     "pluginsConfig": {
@@ -60,7 +61,7 @@
         },
         
         "tbfed-pagefooter": {
-            "copyright":"Copyright &copy zhangjikai.com 2015",
+            "copyright":"Copyright &copy zhangjikai.com 2017",
             "modify_label": "该文件修订时间：",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
         },
@@ -69,12 +70,12 @@
             "token" : "ff100361cdce95dd4c8fb96b4009f7bc"
         },
         "sitemap": {
-            "hostname": "http://gitbook.zhangjikai.com"
+            "hostname": "https://gitbook.zhangjikai.com"
         },
          
         "donate": {
-          "wechat": "http://zhangjikai.com/resource/weixin.png",
-          "alipay": "http://zhangjikai.com/resource/alipay.png",
+          "wechat": "https://zhangjikai.com/resource/weixin.png",
+          "alipay": "https://zhangjikai.com/resource/alipay.png",
           "title": "",
           "button": "赏",
           "alipayText": "支付宝打赏",
