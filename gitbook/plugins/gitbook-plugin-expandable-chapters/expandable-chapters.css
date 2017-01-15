@@ -16,6 +16,7 @@
 .book .book-summary ul.summary li a,
 .book .book-summary ul.summary li span {
 	padding-left: 30px;
+	cursor: pointer;
 }
 
 .book .book-summary .exc-trigger:before {

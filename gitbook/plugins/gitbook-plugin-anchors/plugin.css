@@ -11,8 +11,8 @@ a.plugin-anchor {
     bottom: 0;
 }
 
-a.plugin-anchor span {
-    margin-left: -25px;
+a.plugin-anchor i {
+    margin-left: -30px;
     font-size: 15px !important;
 }
 

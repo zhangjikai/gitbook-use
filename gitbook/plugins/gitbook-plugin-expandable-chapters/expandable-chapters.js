@@ -9,14 +9,15 @@ require(['gitbook', 'jQuery'], function(gitbook, $) {
     $(ARTICLES)
       .parent(CHAPTER)
       .children('a,span')
-      .append(
-        $(TRIGGER_TEMPLATE)
-          .on('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            toggle($(e.target).closest(CHAPTER));
-          })
-      );
+      .append(TRIGGER_TEMPLATE)
+      .on('click', function(e) {
+        if (!$(e.target).is('a')) {
+          e.preventDefault();
+          e.stopPropagation();
+          toggle($(e.target).closest(CHAPTER));
+        }
+      });
+
     expand(lsItem());
     //expand current selected chapter with it's parents
     var activeChapter = $(CHAPTER + '.active');
