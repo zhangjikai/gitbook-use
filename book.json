@@ -1,18 +1,7 @@
 {
-    "plugins": [ "theme-api" ],
-    "pluginsConfig": {
-        "theme-api": {
-            "languages": [
-                {
-                    "lang": "js",
-                    "name": "JavaScript",
-                    "default": true
-                },
-                {
-                    "lang": "java",
-                    "name": "Java"
-                }
-            ]
-        }
-    }
+    "plugins": [
+        "theme-faq",
+        "-lunr",
+        "search-pro@^2.0.2"
+    ]
 }
