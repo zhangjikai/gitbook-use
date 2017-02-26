@@ -1,0 +1,49 @@
+/* CSS for website */
+h1 , h2{
+    border-bottom: 1px solid #EFEAEA;
+    padding-bottom: 3px;
+}
+.markdown-section>:first-child {
+    margin-top: 0!important;
+}
+.page-wrapper {
+    margin-top: -1.275em;
+}
+.book .book-body .page-wrapper .page-inner section.normal {
+    min-height:350px;
+    margin-bottom: 30px;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal hr {
+    height: 0px;
+    padding: 0;
+    margin: 1.7em 0;
+    overflow: hidden;
+    background-color: #e7e7e7;
+    border-bottom: 1px dotted #e7e7e7;
+}
+
+.video-js {
+    width:100%;
+    height: 100%;
+}
+
+pre[class*="language-"] {
+    border: none;
+    background-color: #f7f7f7;
+    font-size: 1em;
+    line-height: 1.2em;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal {
+    font-size: 16px;
+    font-family:  "ubuntu", "Tahoma", "Microsoft YaHei", arial, sans-serif;
+}
+
+.aceCode {
+  font-size: 14px !important;
+}
+
+input[type=checkbox]{
+    margin-left: -2em;
+}
