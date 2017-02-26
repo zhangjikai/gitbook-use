@@ -1,91 +1,134 @@
 {
-    "title" : "Gibook Use",
-    "description" : "记录Gitbook的配置和一些插件的使用",
-    "author" : "zhangjikai",
-    "generator": "site",
-    "language" : "zh-hans",
-    "gitbook" : "2.6.4",
-    "links" : {
-        "sidebar" : {
-            "Home" : "https://zhangjikai.com"
+    "title": "Gibook Use",
+    "description": "记录Gitbook的配置和一些插件的使用",
+    "author": "zhangjikai",
+    "output.name": "site",
+    "language": "zh-hans",
+    "gitbook": "3.2.2",
+    "root": ".",
+    "structure" : {
+        "readme": "introduction.md"
+    },
+    "links": {
+        "sidebar": {
+            "Home": "http://www.zhangjikai.com"
         }
     },
-   "plugins": [
-        "disqus",
+    "plugins": [
+        "-lunr",
         "-search",
-        "search-pro@1.0.7",
-        "advanced-emoji@0.1.5",
-        "github",
-        "ace",
-        "emphasize",
-        "katex",
-        "anchors",
-        "include-codeblock",
-        "mermaid",
-        "tbfed-pagefooter",
-        "sectionx",
-        "expandable-chapters",
-        "codeblock-filename",
-        "baidu",
-        "sitemap@1.0.2",
-        "donate",
-        "local-video",
-        "toc",
-        "edit-link",
-        "back-to-top-button@0.1.0"
-       
+        "-highlight",
+        "search-plus@^0.0.11",
+        "simple-page-toc@^0.1.1",
+        "github@^2.0.0",
+        "github-buttons@2.1.0",
+        "edit-link@^2.0.2",
+        "disqus@^0.1.0",
+        "prism@^2.1.0",
+        "prism-themes@^0.0.2",
+        "advanced-emoji@^0.2.1",
+        "anchors@^0.7.1",
+        "include-codeblock@^3.0.2",
+        "ace@^0.3.2",
+        "emphasize@^1.1.0",
+        "katex@^1.1.3",
+        "splitter@^0.0.8",
+        "mermaid@^0.0.9",
+        "tbfed-pagefooter@^0.0.1",
+        "expandable-chapters-small@^0.1.7",
+        "sectionx@^3.1.0",
+        "baidu@^0.1.0",
+        "donate@^1.0.2",
+        "local-video@^1.0.1",
+        "sitemap-general@^0.1.1",
+        "anchor-navigation-ex@0.1.8",
+        "favicon@^0.0.2",
+        "todo@^0.1.3"
     ],
     "pluginsConfig": {
+        "theme-default": {
+            "showLevel": true
+        },
         "disqus": {
             "shortName": "gitbookuse"
+        },
+        "prism": {
+            "css": [
+                "prism-themes/themes/prism-base16-ateliersulphurpool.light.css"
+            ]
         },
         "github": {
             "url": "https://github.com/zhangjikai/gitbook-use"
         },
-        "search-pro": {
-            "cutWordLib": "nodejieba",
-            "defineWord": ["gitbook-use"]
-         },
-        
+        "github-buttons": {
+            "repo": "zhangjikai/gitbook-use",
+            "types": [
+                "star"
+            ],
+            "size": "small"
+        },
+        "include-codeblock": {
+            "template": "ace",
+            "unindent": true,
+            "edit": true
+
+        },
         "sharing": {
             "weibo": true,
             "facebook": true,
             "twitter": true,
             "google": false,
             "instapaper": false,
-             "vk": false,
+            "vk": false,
             "all": [
-                "facebook", "google", "twitter",
-                "weibo", "instapaper"
+                "facebook",
+                "google",
+                "twitter",
+                "weibo",
+                "instapaper"
             ]
         },
-        
         "tbfed-pagefooter": {
-            "copyright":"Copyright &copy zhangjikai.com 2017",
+            "copyright": "Copyright © zhangjikai.com 2017",
             "modify_label": "该文件修订时间：",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
         },
-        
         "baidu": {
-            "token" : "ff100361cdce95dd4c8fb96b4009f7bc"
+            "token": "ff100361cdce95dd4c8fb96b4009f7bc"
         },
-        "sitemap": {
-            "hostname": "https://gitbook.zhangjikai.com"
-        },
-         
         "donate": {
-          "wechat": "https://zhangjikai.com/resource/weixin.png",
-          "alipay": "https://zhangjikai.com/resource/alipay.png",
-          "title": "",
-          "button": "赏",
-          "alipayText": "支付宝打赏",
-          "wechatText": "微信打赏"
+            "wechat": "https://zhangjikai.com/resource/weixin.png",
+            "alipay": "https://zhangjikai.com/resource/alipay.png",
+            "title": "",
+            "button": "赏",
+            "alipayText": "支付宝打赏",
+            "wechatText": "微信打赏"
         },
-        
-         "edit-link": {
-                "base": "https://github.com/zhangjikai/gitbook-use/edit/master",
-                "label": "Edit This Page"
-         }
-        
+        "simple-page-toc": {
+            "maxDepth": 3,
+            "skipFirstH1": true
+        },
+        "edit-link": {
+            "base": "https://github.com/zhangjikai/gitbook-use/edit/master",
+            "label": "Edit This Page"
+        },
+        "sitemap-general": {
+            "prefix": "http://gitbook.zhangjikai.com"
+        },
+
+            "anchor-navigation-ex": {
+                "isRewritePageTitle": false,
+                "tocLevel1Icon":"fa fa-hand-o-right",
+                "tocLevel2Icon":"fa fa-hand-o-right",
+                "tocLevel3Icon":"fa fa-hand-o-right"
+            },
+            "sectionx": {
+              "tag": "b"
+          },
+        "favicon":{
+            "shortcut": "favicon.ico",
+            "bookmark": "favicon.ico"
+        }
+
     }
 }
