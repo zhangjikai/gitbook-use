@@ -85,16 +85,41 @@ GitBook 同样可以编写 API 文档，只需要引入 [`theme-api` 插件](htt
 使用 GitBook 的 API 文档模式时也可以使用插件，但是因为大部分插件可能针对写书的模式，所以有可能会出现不兼容的现象。
 
 API文档的语法也很简单，因为主要是针对方法的，所以以方法为基本单位，通过下面的语法来定义一个方法
+{% raw %}
 ```
 {% method %}
 
 内容区
 
 {% endmethod %}
+
 ```
+
 在内容区里面，通过 `{% sample lang="lang" %} `来定义一个针对特定语言的演示，通过 `{% common %}` 标识所有语言共同的部分。下面是一个完整的示例：
 
-[import](api.tag)
+
+<pre lang="no-highlight"><code>{% sample lang="js" %}
+这里演示 JavaScript 如何输出信息到控制台
+
+```js
+console.log('Hello World');
+```
+
+{% sample lang="java" %}
+这里演示 Java 如何输出信息到控制台
+
+```java
+System.out.println("Hello World");
+```
+
+{% common %}
+这里是 JavaScript 和 Java 共同的信息
+
+{% endmethod %}
+```
+</code></pre>
+
+{% endraw %}
 
 ## FAQ 文档
 [`theme-faq`](https://plugins.gitbook.com/plugin/theme-faq) 插件主要用来制作知识库或者帮助中心，GitBook 的 [帮助中心](https://plugins.gitbook.com/plugin/theme-faq) 就是使用的该主题。为了支持中文搜索我们需要引入 `search-pro` 包。

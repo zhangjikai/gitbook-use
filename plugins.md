@@ -21,7 +21,7 @@
 - [Expandable-chapters-small - 使左侧的章节目录可以折叠](#expandable-chapters-small)
 - [Sectionx - 将页面分块显示](#sectionx)
 - [GA - Google 统计](#ga)
-- [Baidu - 百度统计](#baidu)
+- [3-ba - 百度统计](#3-ba)
 - [Donate - 打赏插件](#donate)
 - [Local Video - 使用 Video.js 播放本地视频](#local-video)
 - [Simple-page-toc - 自动生成本页的目录结构](#simple-page-toc)
@@ -372,16 +372,16 @@ Google 统计
     }
 }
 ```
-## Baidu
+## 3-ba
 百度统计  
-[插件地址](https://plugins.gitbook.com/plugin/baidu)
+[插件地址](https://plugins.gitbook.com/plugin/3-ba)
 ```json
-"plugin": [
-    "baidu"
- ],
-"pluginsConfig": {
-    "baidu": {
-        "token": "YOUR TOKEN"
+{
+    "plugins": ["3-ba"],
+    "pluginsConfig": {
+        "3-ba": {
+            "token": "xxxxxxxx"
+        }
     }
 }
 ```
