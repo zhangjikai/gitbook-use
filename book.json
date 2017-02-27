@@ -1,6 +1,6 @@
 {
-    "title": "Gibook Use", 
-    "description": "记录Gitbook的配置和一些插件的使用", 
+    "title": "GitBook Use", 
+    "description": "记录 GitBook 的配置和一些插件的使用", 
     "author": "zhangjikai", 
     "output.name": "site", 
     "language": "zh-hans", 
