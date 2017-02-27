@@ -98,7 +98,12 @@ API文档的语法也很简单，因为主要是针对方法的，所以以方�
 在内容区里面，通过 `{% sample lang="lang" %} `来定义一个针对特定语言的演示，通过 `{% common %}` 标识所有语言共同的部分。下面是一个完整的示例：
 
 
-<pre lang="no-highlight"><code>{% sample lang="js" %}
+<pre lang="no-highlight"><code>{% method %}
+## 打印
+
+展示 JavaScript 和 Java 如何输出信息
+
+{% sample lang="js" %}
 这里演示 JavaScript 如何输出信息到控制台
 
 ```js
