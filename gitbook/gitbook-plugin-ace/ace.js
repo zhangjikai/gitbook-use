@@ -28,8 +28,6 @@ require(["gitbook", "jquery"], function (gitbook, $) {
         editor.session.setOption("useWorker", false);
 
       editor.getSession().setMode('ace/mode/' + config.lang);
-      editor.container.style.lineHeight = 1.25;
-      editor.renderer.updateFontSize();
     });
   };
 
