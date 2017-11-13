@@ -1,10 +1,9 @@
 # GitBook 插件
 <!--email_off-->  
-记录一些实用的插件, 如果要指定插件的版本可以使用 `plugin@0.3.1`。下面的插件在 GitBook 的 `3.2.2` 版本中可以正常工作，因为一些插件可能不会随着 GitBook 版本的升级而升级，即下面的插件可能不适用高版本的 GitBook，所以这里指定了 GitBook 的版本。另外本文记录的插件在 Linux 下都是可以正确工作的，windows 系统没有测试。这里只是列举了一部分插件，如果有其它的需求，可以到 [插件官网](https://plugins.gitbook.com/) 区搜索相关插件。
+记录一些实用的插件, 如果要指定插件的版本可以使用 `plugin@0.3.1`。下面的插件在 GitBook 的 `3.2.3` 版本中可以正常工作，因为一些插件可能不会随着 GitBook 版本的升级而升级，即下面的插件可能不适用高版本的 GitBook，所以这里指定了 GitBook 的版本。另外本文记录的插件在 Linux 下都是可以正确工作的，windows 系统没有测试。这里只是列举了一部分插件，如果有其它的需求，可以到 [插件官网](https://plugins.gitbook.com/) 区搜索相关插件。
 <!--/email_off-->
 
 - [Disqus - Disqus 评论](#disqus)
-- [Duoshuo - 多说](#duoshuo)
 - [Search Plus - 支持中文搜索](#search-plus)
 - [Prsim - 使用 Prism.js 高亮代码](#prsim)
 - [Advanced Emoji - 支持 emoji 表情](#advanced-emoji)
@@ -15,8 +14,11 @@
 - [KaTex - 支持数学公式](#katex)
 - [Include Codeblock - 用代码块显示包含文件的内容](#include-codeblock)
 - [Splitter - 使侧边栏的宽度可以自由调节](#splitter)
-- [Mermaid - 支持渲染 Mermaid 图表](#mermaid)
-- [Sharing - 分享当前页面](#sharing)
+- [Mermaid-gb3 - 支持渲染 Mermaid 图表](#mermaid-gb3)
+- [Puml - 支持渲染 uml 图 ](#puml)
+- [Graph - 使用 function-plot 绘制数学函数图](#graph)
+- [Chart  - 绘制图形](#chart)
+- [Sharing-plus - 分享当前页面](#sharing-plus)
 - [Tbfed-pagefooter - 为页面添加页脚](#tbfed-pagefooter)
 - [Expandable-chapters-small - 使左侧的章节目录可以折叠](#expandable-chapters-small)
 - [Sectionx - 将页面分块显示](#sectionx)
@@ -25,12 +27,20 @@
 - [Donate - 打赏插件](#donate)
 - [Local Video - 使用 Video.js 播放本地视频](#local-video)
 - [Simple-page-toc - 自动生成本页的目录结构](#simple-page-toc)
-* [Anchors - 添加 Github 风格的锚点](#anchors)
-* [Anchor-navigation-ex - 添加Toc到侧边悬浮导航以及回到顶部按钮](#anchor-navigation-ex)
+- [Anchors - 添加 Github 风格的锚点](#anchors)
+- [Anchor-navigation-ex - 添加Toc到侧边悬浮导航以及回到顶部按钮](#anchor-navigation-ex)
 - [Edit Link - 链接到当前页源文件上](#edit-link)
 - [Sitemap-general - 生成sitemap](#sitemap-general)
-* [Favicon - 更改网站的 favicon.ico](#favicon)
-* [Todo - 添加 Todo 功能](#todo)
+- [Favicon - 更改网站的 favicon.ico](#favicon)
+- [Todo - 添加 Todo 功能](#todo)
+- [Terminal - 模拟终端样式](#terminal)
+- [Copy-code-button - 为代码块添加复制按钮](#copy-code-button)
+- [Alerts - 添加不同 alerts 样式的 blockquotes](#alerts)
+- [Include-csv - 显示 csv 文件内容](#include-csv)
+- [Musicxml - 支持 musicxml 格式的乐谱渲染](#musicxml)
+- [Klipse - 集成 Kplise (online code evaluator)](#klipse)
+- [Versions-select - 添加版本选择的下拉菜单](#versions-select)
+- [Rss - 添加 rss 订阅功能](#rss)
 
 ## Disqus
 
@@ -44,25 +54,6 @@
 "pluginsConfig": {
     "disqus": {
         "shortName": "gitbookuse"
-    }
-}
-```
-
-## Duoshuo
-添加多说
-
-[插件地址](https://plugins.gitbook.com/plugin/duoshuo)
-
-```json
-{
-    "plugins": [
-        "duoshuo"
-    ],
-    "pluginsConfig": {
-        "duoshuo": {
-            "short_name": "your duoshuo's shortname",
-            "theme": "default"
-        }
     }
 }
 ```
@@ -270,45 +261,210 @@ $$
     "splitter"
 ]
 ```
-## Mermaid
+## Mermaid-gb3
 支持渲染[Mermaid](https://github.com/knsv/mermaid)图表  
-[插件地址](https://plugins.gitbook.com/plugin/mermaid)
+[插件地址](https://plugins.gitbook.com/plugin/mermaid-gb3)
 ```json
 "plugins": [
-    "mermaid"
+    "mermaid-gb3"
 ]
 ```
 使用示例:
-{% mermaid %}
+```mermaid
 graph TD;
   A-->B;
   A-->C;
   B-->D;
   C-->D;
-{% endmermaid %}
+```
 
-## Sharing
-分享当前页面, gitbook的默认插件, 使用下面方式来禁用
+## Puml
+使用 PlantUML 展示 uml 图。
+
+[插件地址](https://plugins.gitbook.com/plugin/puml)  
+[PlantUML 地址](http://plantuml.com/)
+
+```
+{
+    "plugins": ["puml"]
+}
+```
+使用示例：
+```
+{% plantuml %}
+Class Stage
+    Class Timeout {
+        +constructor:function(cfg)
+        +timeout:function(ctx)
+        +overdue:function(ctx)
+        +stage: Stage
+    }
+    Stage <|-- Timeout
+{% endplantuml %}
+```
+效果如下所示：
+
+{% plantuml %}
+Class Stage
+    Class Timeout {
+        +constructor:function(cfg)
+        +timeout:function(ctx)
+        +overdue:function(ctx)
+        +stage: Stage
+    }
+    Stage <|-- Timeout
+{% endplantuml %}
+
+
+## Graph
+
+使用 function-plot 绘制数学函数图。
+
+[插件地址](https://plugins.gitbook.com/plugin/graph)  
+[function-plot](https://mauriciopoppe.github.io/function-plot/)
 
 ```json
- plugins: ["-sharing"]
+{
+    "plugins": [ "graph" ],
+}
+```
+
+下面是一个示例，需要注意的是 `{% graph %}` 块中的内容必须是合法的 JSON 格式。
+```
+{% graph %}
+{
+    "title": "1/x * cos(1/x)",
+    "grid": true,
+    "xAxis": {
+        "domain": [0.01, 1]
+    },
+    "yAxis": {
+        "domain": [-100, 100]
+    },
+    "data": [{
+        "fn": "1/x * cos(1/x)",
+        "closed": true
+    }]
+}
+{% endgraph %}
+```
+
+效果如下所示：
+{% graph %}
+{
+    "title": "1/x * cos(1/x)",
+    "grid": true,
+    "xAxis": {
+        "domain": [0.01, 1]
+    },
+    "yAxis": {
+        "domain": [-100, 100]
+    },
+    "data": [{
+        "fn": "1/x * cos(1/x)",
+        "closed": true
+    }]
+}
+{% endgraph %}
+
+## Chart
+使用 C3.js 或者 Highcharts 绘制图形。
+
+[插件地址](https://plugins.gitbook.com/plugin/chart)  
+[C3.js](https://github.com/c3js/c3)  
+[highcharts](https://github.com/highcharts/highcharts)
+
+```json
+{
+    "plugins": [ "chart" ],
+    "pluginsConfig": {
+        "chart": {
+            "type": "c3"
+        }
+    }
+}
+```
+type 可以是 `c3` 或者 `highcharts`, 默认是 `c3`.
+
+下面是一个示例：
+```
+{% chart %}
+{
+    "data": {
+        "type": "bar",
+        "columns": [
+            ["data1", 30, 200, 100, 400, 150, 250],
+            ["data2", 50, 20, 10, 40, 15, 25]
+        ],
+        "axes": {
+            "data2": "y2"
+        }
+    },
+    "axis": {
+        "y2": {
+            "show": true
+        }
+    }
+}
+{% endchart %}
+```
+效果如下所示：
+{% chart %}
+{
+    "data": {
+        "type": "bar",
+        "columns": [
+            ["data1", 30, 200, 100, 400, 150, 250],
+            ["data2", 50, 20, 10, 40, 15, 25]
+        ],
+        "axes": {
+            "data2": "y2"
+        }
+    },
+    "axis": {
+        "y2": {
+            "show": true
+        }
+    }
+}
+{% endchart %}
+
+## Sharing-plus
+分享当前页面，比默认的 sharing 插件多了一些分享方式。
+
+[插件地址](https://plugins.gitbook.com/plugin/sharing-plus)
+
+```json
+ plugins: ["-sharing", "sharing-plus"]
 ```
 配置:
 
 ```json
 "pluginsConfig": {
     "sharing": {
-        "weibo": true,
-        "facebook": true,
-        "twitter": true,
-        "google": false,
-        "instapaper": false,
-        "vk": false,
-        "all": [
-            "facebook", "google", "twitter",
-                "weibo", "instapaper"
-        ]
-    }
+       "douban": false,
+       "facebook": false,
+       "google": true,
+       "hatenaBookmark": false,
+       "instapaper": false,
+       "line": true,
+       "linkedin": true,
+       "messenger": false,
+       "pocket": false,
+       "qq": false,
+       "qzone": true,
+       "stumbleupon": false,
+       "twitter": false,
+       "viber": false,
+       "vk": false,
+       "weibo": true,
+       "whatsapp": false,
+       "all": [
+           "facebook", "google", "twitter",
+           "weibo", "instapaper", "linkedin",
+           "pocket", "stumbleupon"
+       ]
+   }
 }
 ```
 ## Tbfed-pagefooter
@@ -562,3 +718,269 @@ input[type=checkbox]{
 使用示例：
 - [ ] write some articles
 - [x] drink a cup of tea
+
+## Terminal
+模拟终端显示，主要用于显示命令以及多行输出，不过写起来有些麻烦。
+
+[插件地址](https://plugins.gitbook.com/plugin/terminal)
+```json
+{
+    "plugins": [
+        "terminal"
+    ],
+    "pluginsConfig": {
+        "terminal": {
+            "copyButtons": true,
+            "fade": false,
+            "style": "flat"
+        }
+    }
+}
+```
+
+现在支持 6 种标签：
+* command: Command "executed" in the terminal.
+* delimiter: Sequence of characters between the prompt and the command.
+* error: Error message.
+* path: Directory path shown in the prompt.
+* prompt: Prompt of the user.
+* warning: Warning message.
+
+标签的使用格式如下所示：
+```
+**[<tag_name> 内容]
+```
+为了使标签正常工作，需要在代码块的第一行加入 `**[termial]` 标记，下面是一个完整的示例：
+
+<pre>```
+**[terminal]
+**[prompt foo@joe]**[path ~]**[delimiter  $ ]**[command ./myscript]
+Normal output line. Nothing special here...
+But...
+You can add some colors. What about a warning message?
+**[warning [WARNING] The color depends on the theme. Could look normal too]
+What about an error message?
+**[error [ERROR] This is not the error you are looking for]
+```</pre>
+
+效果如下所示：
+```
+**[terminal]
+**[prompt foo@joe]**[path ~]**[delimiter  $ ]**[command ./myscript]
+Normal output line. Nothing special here...
+But...
+You can add some colors. What about a warning message?
+**[warning [WARNING] The color depends on the theme. Could look normal too]
+What about an error message?
+**[error [ERROR] This is not the error you are looking for]
+```
+
+terminal 支持下面 5 种样式，如果需要更换样式，在 pluginsConfig 里配置即可。
+* black: Just that good old black terminal everybody loves.
+* classic: Looking for green color font over a black background? This is for you.
+* flat: Oh, flat colors. I love flat colors. Everything looks modern with them.
+* ubuntu: Admit it or not, but Ubuntu have a good looking terminal.
+* white: Make your terminal to blend in with your GitBook.
+
+## Copy-code-button
+为代码块添加复制的按钮。
+
+[插件地址](https://plugins.gitbook.com/plugin/copy-code-button)
+
+```json
+{
+    "plugins": ["copy-code-button"]
+}
+```
+效果如下图所示：
+
+![](assets/images/copy-code-button.png)
+
+## Alerts
+添加不同 alerts 样式的 blockquotes，目前包含 info, warning, danger 和 success 四种样式。
+
+[插件地址](https://plugins.gitbook.com/plugin/alerts)
+
+```json
+{
+    "plugins": ["alerts"]
+}
+```
+下面是使用示例：
+```
+Info styling
+> **[info] For info**
+>
+> Use this for infomation messages.
+
+Warning styling
+> **[warning] For warning**
+>
+> Use this for warning messages.
+
+Danger styling
+> **[danger] For danger**
+>
+> Use this for danger messages.
+
+Success styling
+> **[success] For info**
+>
+> Use this for success messages.
+```
+效果如下所示：
+
+Info styling
+> **[info] For info**
+>
+> Use this for infomation messages.
+
+Warning styling
+> **[warning] For warning**
+>
+> Use this for warning messages.
+
+Danger styling
+> **[danger] For danger**
+>
+> Use this for danger messages.
+
+Success styling
+> **[success] For info**
+>
+> Use this for success messages.
+
+## Include-csv
+展示 csv 文件。
+
+[插件地址](https://plugins.gitbook.com/plugin/include-csv)
+
+```json
+{
+    "plugins": ["include-csv"]
+}
+```
+使用示例：
+```
+{% includeCsv  src="./assets/csv/test.csv", useHeader="true" %} {% endincludeCsv %}
+```
+效果如下所示：
+
+{% includeCsv  src="./assets/csv/test.csv", useHeader="true" %} {% endincludeCsv %}
+
+## Musicxml
+支持 musicxml 格式的乐谱渲染。
+
+[插件地址](https://plugins.gitbook.com/plugin/musicxml)  
+[musicXML](http://www.musicxml.com/)
+
+```
+{
+    "plugins": ["musicxml"]
+}
+```
+
+下面是一个示例，需要注意的是 block 中的内容必须是一个合法的 musicxml 文件路径，并且不能有换行和空格。
+```
+{% musicxml %}assets/musicxml/mandoline - debussy.xml{% endmusicxml %}
+```
+效果如下所示
+{% musicxml %}assets/musicxml/mandoline - debussy.xml{% endmusicxml %}
+
+## Klipse
+集成 Klipse (online code evaluator)
+
+[插件地址](https://plugins.gitbook.com/plugin/klipse)  
+[Klipse](https://github.com/viebel/klipse)
+
+```
+{
+    "plugins": ["klipse"]
+}
+```
+
+klipse 目前支持下面的语言：
+* javascript: evaluation is done with the javascript function eval and pretty printing of the result is done with pretty-format
+* clojure[script]: evaluation is done with Self-Hosted Clojurescript
+* ruby: evaluation is done with Opal
+* C++: evaluation is done with JSCPP
+* python: evaluation is done with Skulpt
+* scheme: evaluation is done with BiwasScheme
+* PHP: evaluation is done with Uniter
+* BrainFuck
+* JSX
+* EcmaScript2017
+* Google Charts: See Interactive Business Report with Google Charts.
+
+下面是一个使用示例：
+<pre><code>```eval-python
+print [x + 1 for x in range(10)]
+```</code></pre>
+
+效果如下所示：
+```eval-python
+print [x + 1 for x in range(10)]
+```
+
+## Versions-select
+添加版本选择的下拉菜单，针对文档有多个版本的情况。
+
+[插件地址](https://plugins.gitbook.com/plugin/versions-select)
+
+```
+{
+    "plugins": [ "versions-select" ],
+    "pluginsConfig": {
+        "versions": {
+            "options": [
+                {
+                    "value": "http://gitbook.zhangjikai.com",
+                    "text": "v3.2.2"
+                },
+                {
+                    "value": "http://gitbook.zhangjikai.com/v2/",
+                    "text": "v2.6.4"
+                }
+            ]
+        }
+    }
+}
+```
+
+我们可以自定义 css 来修改 select 的显示样式：
+```css
+.versions-select select {
+    height: 2em;
+    line-height: 2em;
+    border-radius: 4px;
+    background: #efefef;
+}
+```
+
+效果见左上角。
+
+## RSS
+添加 rss 订阅功能。
+
+[插件地址](https://plugins.gitbook.com/plugin/rss)
+
+```json
+{
+    "plugins": [ "rss" ],
+    "pluginsConfig": {
+        "rss": {
+            "title": "GitBook 使用教程",
+            "description": "记录 GitBook 的配置和一些插件的使用",
+            "author": "Jikai Zhang",
+            "feed_url": "http://gitbook.zhangjikai.com/rss",
+            "site_url": "http://gitbook.zhangjikai.com/",
+            "managingEditor": "me@zhangjikai.com",
+            "webMaster": "me@zhangjikai.com",
+            "categories": [
+                "gitbook"
+            ]
+        }
+    }
+}
+```
+效果见右上角。

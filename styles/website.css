@@ -47,3 +47,22 @@ pre[class*="language-"] {
 input[type=checkbox]{
     margin-left: -2em;
 }
+
+.page-footer span{
+    font-size: 12px;
+}
+
+.page-footer .copyright {
+    float: left;
+}
+
+.body, html {
+    overflow-y: hidden;
+}
+
+.versions-select select {
+    height: 2em;
+    line-height: 2em;
+    border-radius: 4px;
+    background: #efefef;
+}

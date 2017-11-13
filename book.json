@@ -34,7 +34,7 @@
         "emphasize@^1.1.0",
         "katex@^1.1.3",
         "splitter@^0.0.8",
-        "mermaid@^0.0.9",
+        "mermaid-gb3@2.1.0",
         "tbfed-pagefooter@^0.0.1",
         "expandable-chapters-small@^0.1.7",
         "sectionx@^3.1.0",
@@ -44,8 +44,21 @@
         "anchor-navigation-ex@0.1.8",
         "favicon@^0.0.2",
         "todo@^0.1.3",
-        "3-ba@^0.9.0"
+        "3-ba@^0.9.0",
+        "terminal@^0.3.2",
+        "alerts@^0.2.0",
+        "include-csv@^0.1.0",
+        "puml@^1.0.1",
+        "musicxml@^1.0.2",
+        "klipse@^1.2.0",
+        "versions-select@^0.1.1",
+        "rss@^3.0.2",
+        "-sharing",
+        "sharing-plus@^0.0.2",
+        "graph@^0.1.0",
+        "chart@^0.2.0"
     ],
+
     "pluginsConfig": {
         "theme-default": {
             "showLevel": true
@@ -74,20 +87,29 @@
             "edit": true
         },
         "sharing": {
-            "weibo": true,
-            "facebook": true,
-            "twitter": true,
-            "google": false,
-            "instapaper": false,
-            "vk": false,
-            "all": [
-                "facebook",
-                "google",
-                "twitter",
-                "weibo",
-                "instapaper"
-            ]
-        },
+           "douban": false,
+           "facebook": false,
+           "google": true,
+           "hatenaBookmark": false,
+           "instapaper": false,
+           "line": false,
+           "linkedin": true,
+           "messenger": false,
+           "pocket": false,
+           "qq": false,
+           "qzone": false,
+           "stumbleupon": false,
+           "twitter": false,
+           "viber": false,
+           "vk": false,
+           "weibo": true,
+           "whatsapp": false,
+           "all": [
+               "facebook", "google", "twitter",
+               "weibo", "instapaper", "linkedin",
+               "pocket", "stumbleupon", "qq", "qzone"
+           ]
+       },
         "tbfed-pagefooter": {
             "copyright": "Copyright © zhangjikai.com 2017",
             "modify_label": "该文件修订时间：",
@@ -127,6 +149,37 @@
         "favicon": {
             "shortcut": "favicon.ico",
             "bookmark": "favicon.ico"
+        },
+        "terminal": {
+            "copyButtons": true,
+            "fade": false,
+            "style": "flat"
+        },
+
+        "versions": {
+            "options": [
+                {
+                    "value": "http://gitbook.zhangjikai.com",
+                    "text": "v3.2.3"
+                },
+                {
+                    "value": "http://gitbook.zhangjikai.com/v2/",
+                    "text": "v2.6.4"
+                }
+            ]
+        },
+
+        "rss": {
+            "title": "GitBook 使用教程",
+            "description": "记录 GitBook 的配置和一些插件的使用",
+            "author": "Jikai Zhang",
+            "feed_url": "http://gitbook.zhangjikai.com/rss",
+            "site_url": "http://gitbook.zhangjikai.com/",
+            "managingEditor": "me@zhangjikai.com",
+            "webMaster": "me@zhangjikai.com",
+            "categories": [
+                "gitbook"
+            ]
         }
     }
 }
