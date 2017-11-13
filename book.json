@@ -4,7 +4,7 @@
     "author": "zhangjikai",
     "output.name": "site",
     "language": "zh-hans",
-    "gitbook": "3.2.2",
+    "gitbook": "3.2.3",
     "root": ".",
     "structure": {
         "readme": "introduction.md"
