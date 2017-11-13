@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[GitBook 使用教程]]></title>
+        <description><![CDATA[记录 GitBook 的配置和一些插件的使用]]></description>
+        <link>http://gitbook.zhangjikai.com/</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Mon, 13 Nov 2017 04:51:07 GMT</lastBuildDate>
+        <atom:link href="http://gitbook.zhangjikai.com/rss" rel="self" type="application/rss+xml"/>
+        <author><![CDATA[Jikai Zhang]]></author>
+        <managingEditor><![CDATA[me@zhangjikai.com]]></managingEditor>
+        <webMaster><![CDATA[me@zhangjikai.com]]></webMaster>
+        <category><![CDATA[gitbook]]></category>
+        <item>
+            <title><![CDATA[前言]]></title>
+            <description><![CDATA[主要记录GitBook的安装配置以及一些插件信息, 下面是GitBook的一些资源]]></description>
+            <link>http://gitbook.zhangjikai.com/introduction.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/introduction.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[GitBook安装]]></title>
+            <description><![CDATA[下面介绍在本地如何安装 GitBook，如果不需要本地调试 & 不需要获得生成的 html 文件，可以直接使用 官网 提供的服务。]]></description>
+            <link>http://gitbook.zhangjikai.com/installation.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/installation.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[命令]]></title>
+            <description><![CDATA[这里主要介绍一下 GitBook 的命令行工具 gitbook-cli 的一些命令, 首先说明两点:]]></description>
+            <link>http://gitbook.zhangjikai.com/commands.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/commands.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[目录结构]]></title>
+            <description><![CDATA[GitBook 基本的目录结构如下所示]]></description>
+            <link>http://gitbook.zhangjikai.com/structure.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/structure.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[GitBook配置]]></title>
+            <description><![CDATA[记录Gitbook的一些配置信息]]></description>
+            <link>http://gitbook.zhangjikai.com/settings.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/settings.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[GitBook 插件]]></title>
+            <description><![CDATA[记录一些实用的插件, 如果要指定插件的版本可以使用 plugin@0.3.1。下面的插件在 GitBook 的 3.2.3 版本中可以正常工作，因为一些插件可能不会随着 GitBook 版本的升级而升级，即下面的插件可能不适用高版本的 GitBook，所以这里指定了 GitBook 的版本。另外本文记录的插件在 Linux 下都是可以正确工作的，windows 系统没有测试。这里只是列举了一部分插件，如果有其它的需求，可以到 插件官网 区搜索相关插件。]]></description>
+            <link>http://gitbook.zhangjikai.com/plugins.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/plugins.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[主题]]></title>
+            <description><![CDATA[目前 GitBook 提供了三类文档： Book 文档、API文档、FAQ文档。我们常用的就是 Book 文档模式，如果我们需要使用 API 文档模式或者 FAQ 文档模式，只需引入文档对应的主题插件即可，下面我们介绍与这三类文档相关的主题插件。]]></description>
+            <link>http://gitbook.zhangjikai.com/themes.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/themes.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[book.json配置文件]]></title>
+            <description><![CDATA[{% if file.type=="asciidoc" %}++++{% endif %}]]></description>
+            <link>http://gitbook.zhangjikai.com/bookjson.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/bookjson.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[分散式版本控制软件]]></description>
+            <link>http://gitbook.zhangjikai.com/GLOSSARY.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/GLOSSARY.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+    </channel>
+</rss>
