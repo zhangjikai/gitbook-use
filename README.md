@@ -1,7 +1,7 @@
 # 前言
 主要记录 GitBook 的安装配置以及一些插件信息，当前使用的 GitBook 版本为 `3.2.3`。
 
-推荐一下 [docsify](https://github.com/QingWei-Li/docsify)，相当于一个精简的 GitBook，不需要编译，使用很方便。[这里] (https://github.com/zhangjikai/docsify/tree/master/template) 是一个基于 doscify 配置的模版，同时在 docsify 的基础上做了一些修改，具体的效果可以看一下在线的示例 [http://notes.zhangjikai.com/#/] .
+推荐一下 [docsify](https://github.com/QingWei-Li/docsify)，相当于一个精简的 GitBook，不需要编译，使用很方便。[这里](https://github.com/zhangjikai/docsify/tree/master/template) 是一个基于 doscify 配置的模版，同时在 docsify 的基础上做了一些修改，具体的效果可以看一下[在线的示例](http://notes.zhangjikai.com/#/) .
 
 ## 运行
 * 安装 GitBook
