@@ -1,6 +1,8 @@
 # 前言
 主要记录 GitBook 的安装配置以及一些插件信息，当前使用的 GitBook 版本为 `3.2.3`。
 
+推荐一下 [docsify](https://github.com/QingWei-Li/docsify)，相当于一个精简的 GitBook，不需要编译，使用很方便。
+
 ## 运行
 * 安装 GitBook
 ```bash
