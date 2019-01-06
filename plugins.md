@@ -21,6 +21,8 @@
 - [Sharing-plus - 分享当前页面](#sharing-plus)
 - [Tbfed-pagefooter - 为页面添加页脚](#tbfed-pagefooter)
 - [Expandable-chapters-small - 使左侧的章节目录可以折叠](#expandable-chapters-small)
+- [Expandable-chapters - 左侧章节目录可以折叠](#Expandable-chapters)
+- [Toggle-chapters - 左侧章节目录可以折叠](#Toggle-chapters)
 - [Sectionx - 将页面分块显示](#sectionx)
 - [GA - Google 统计](#ga)
 - [3-ba - 百度统计](#3-ba)
@@ -491,6 +493,24 @@ type 可以是 `c3` 或者 `highcharts`, 默认是 `c3`.
 
 ```json
 plugins: ["expandable-chapters-small"]
+```
+
+## Expandable-chapters
+使左侧的章节目录可以折叠
+
+[插件地址](https://plugins.gitbook.com/plugin/expandable-chapters)
+
+```json
+plugins: ["expandable-chapters"]
+```
+
+## Toggle-chapters
+使左侧的章节目录可以折叠。相比expandable-chapters， 没有折叠箭头符号，并且当前只有一项可以展开。参考：https://blog.csdn.net/lintcgirl/article/details/54314113
+
+[插件地址](https://plugins.gitbook.com/plugin/toggle-chapters)
+
+```json
+plugins: ["toggle-chapters"]
 ```
 
 ## Sectionx
