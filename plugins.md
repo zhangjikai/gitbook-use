@@ -44,6 +44,7 @@
 - [Versions-select - 添加版本选择的下拉菜单](#versions-select)
 - [Rss - 添加 rss 订阅功能](#rss)
 - [Theme-comscore - 修改标题和表格颜色](#theme-comscore)
+- [summary - 自动生成目录](#summary)
 
 ## Disqus
 
@@ -1020,3 +1021,44 @@ print [x + 1 for x in range(10)]
 }
 ```
 
+## summary
+
+根据文件自动生成目录。
+
+[插件地址](https://plugins.gitbook.com/plugin/summary)
+
+``` json
+{
+"plugins": [
+        "summary"
+    ]
+}
+```
+规则：
+
+- 每个新增的目录中加入`README.md`，否则菜单为不可折叠
+- 同个目录下的文件采用自然排序来决定菜单生成的前后顺序， 故在文件或目录前加入 "数字-" 如 "0-" 或 "1-" 来排序菜单的前后顺序。
+- 菜单由目录自动生成，菜单名称依赖md文件中的标题， 故每个md文件中必须添加标题, 否则无法生成目录。
+
+示例：  
+
+我们假设您的源代码树是这样完成的：
+
+``` bash
+$ tree .
+.
+├── 1-Getting Started
+│   ├── 0-README.md
+│   └── 1-TEST.md
+├── 2-Reference
+│   └── 0-README.md
+├── README.md
+└── SUMMARY.md
+```
+
+生成的SUMMARY.md文件将如下所示：
+``` bash
+- [Getting Started](1-Getting Started/0-README.md)
+    - [Test](1-Getting Started/1-TEST.md)
+- [Reference](2-Reference/0-README.md)
+```
