@@ -41,6 +41,7 @@
 - [Klipse - 集成 Kplise (online code evaluator)](#klipse)
 - [Versions-select - 添加版本选择的下拉菜单](#versions-select)
 - [Rss - 添加 rss 订阅功能](#rss)
+- [Theme-comscore - 修改标题和表格颜色](#theme-comscore)
 
 ## Disqus
 
@@ -984,3 +985,18 @@ print [x + 1 for x in range(10)]
 }
 ```
 效果见右上角。
+
+## theme-comscore
+
+主题插件, 修改标题和表格颜色。默认标题都是黑色的。
+
+[插件地址](https://plugins.gitbook.com/plugin/theme-comscore)
+
+``` json
+{
+"plugins": [
+        "theme-comscore"
+    ]
+}
+```
+
