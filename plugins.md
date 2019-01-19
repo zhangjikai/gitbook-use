@@ -21,6 +21,7 @@
 - [Sharing-plus - 分享当前页面](#sharing-plus)
 - [Tbfed-pagefooter - 为页面添加页脚](#tbfed-pagefooter)
 - [Expandable-chapters-small - 使左侧的章节目录可以折叠](#expandable-chapters-small)
+- [Toggle-chapters - 左侧章节目录可以折叠](#Toggle-chapters)
 - [Sectionx - 将页面分块显示](#sectionx)
 - [GA - Google 统计](#ga)
 - [3-ba - 百度统计](#3-ba)
@@ -41,6 +42,8 @@
 - [Klipse - 集成 Kplise (online code evaluator)](#klipse)
 - [Versions-select - 添加版本选择的下拉菜单](#versions-select)
 - [Rss - 添加 rss 订阅功能](#rss)
+- [Theme-comscore - 修改标题和表格颜色](#theme-comscore)
+- [summary - 自动生成目录](#summary)
 
 ## Disqus
 
@@ -490,6 +493,15 @@ type 可以是 `c3` 或者 `highcharts`, 默认是 `c3`.
 
 ```json
 plugins: ["expandable-chapters-small"]
+```
+
+## Toggle-chapters
+使左侧的章节目录可以折叠。相比expandable-chapters， 没有折叠箭头符号，并且当前只有一项可以展开。参考：https://blog.csdn.net/lintcgirl/article/details/54314113
+
+[插件地址](https://plugins.gitbook.com/plugin/toggle-chapters)
+
+```json
+plugins: ["toggle-chapters"]
 ```
 
 ## Sectionx
@@ -984,3 +996,59 @@ print [x + 1 for x in range(10)]
 }
 ```
 效果见右上角。
+
+## theme-comscore
+
+主题插件, 修改标题和表格颜色。默认标题都是黑色的。
+
+[插件地址](https://plugins.gitbook.com/plugin/theme-comscore)
+
+``` json
+{
+"plugins": [
+        "theme-comscore"
+    ]
+}
+```
+
+## summary
+
+根据文件自动生成目录。
+
+[插件地址](https://plugins.gitbook.com/plugin/summary)
+
+``` json
+{
+"plugins": [
+        "summary"
+    ]
+}
+```
+规则：
+
+- 每个新增的目录中加入`README.md`，否则菜单为不可折叠
+- 同个目录下的文件采用自然排序来决定菜单生成的前后顺序， 故在文件或目录前加入 "数字-" 如 "0-" 或 "1-" 来排序菜单的前后顺序。
+- 菜单由目录自动生成，菜单名称依赖md文件中的标题， 故每个md文件中必须添加标题, 否则无法生成目录。
+
+示例：  
+
+我们假设您的源代码树是这样完成的：
+
+``` bash
+$ tree .
+.
+├── 1-Getting Started
+│   ├── 0-README.md
+│   └── 1-TEST.md
+├── 2-Reference
+│   └── 0-README.md
+├── README.md
+└── SUMMARY.md
+```
+
+生成的SUMMARY.md文件将如下所示：
+``` bash
+- [Getting Started](1-Getting Started/0-README.md)
+    - [Test](1-Getting Started/1-TEST.md)
+- [Reference](2-Reference/0-README.md)
+```
